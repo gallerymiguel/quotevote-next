@@ -26,7 +26,7 @@ describe('Executable GraphQL Schema', () => {
     expect(result.data).toHaveProperty('__schema');
   });
 
-  it('prints and rebuilds the complete executable schema', () => {
+  it('prints and rebuilds the schema SDL', () => {
     const rebuiltSchema = buildSchema(printSchema(schema));
 
     expect(validateSchema(rebuiltSchema)).toEqual([]);
